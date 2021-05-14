@@ -50,4 +50,3 @@ print(datetime.now(), "\033[0;33m [INFO] Guardando imagen... \033[0;0m")
 imagen.close()
 
     
-    
