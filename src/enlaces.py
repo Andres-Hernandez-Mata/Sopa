@@ -12,8 +12,10 @@ from datetime import datetime
 from lxml import html
 import os
 
+clear = lambda: os.system("cls" if os.name=="nt" else "clear")
+
 def main():
-    os.system('cls')
+    clear()
     url = 'https://www.uanl.mx/enlinea'
     print(datetime.now(), "\033[0;32m [INFO] Buscando... %s \033[0;0m" % url)
     response = requests.get(url)
