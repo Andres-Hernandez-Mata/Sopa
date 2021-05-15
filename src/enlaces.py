@@ -23,7 +23,7 @@ def main():
     parsed_body = html.fromstring(response.text)
     href = parsed_body.xpath('//a/@href')
     print(datetime.now(), "\033[0;32m [INFO] %s enlaces encontrados \033[0;0m" % len(href))
-    enlaces = bs.find_all("a",href=True)    
+    enlaces = bs.find_all("a", href=True)    
     direcciones = [enlace['href'] for enlace in enlaces]
     for link in direcciones:
         if not link == '#':
